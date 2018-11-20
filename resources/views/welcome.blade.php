@@ -95,6 +95,7 @@
                     <a href="https://laravel-news.com">Requerimientos Pendientes</a>
                     <a href="https://nova.laravel.com">Requerimientos Terminados</a> <br/>
                     <br/>
+                    <a href="">Contacto Clientes</a>
                     <a href="https://laracasts.com">Conexiones AnyDesk</a>
                     <a href="/links">Links de interés</a>
                 </div>
