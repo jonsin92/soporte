@@ -89,7 +89,7 @@
 
                 <div class="links">
                     <!-- <a href="https://laravel.com/docs">Ingreso Requerimientos</a> -->
-                    <a href="requerimiento">Ver Todos</a> <br/>
+                    <a href="requerimiento">Ver Todos los Requerimientos</a> <br/>
                     <br/>
                     <a href="">Requerimientos en Proceso</a>
                     <a href="https://laravel-news.com">Requerimientos Pendientes</a>
