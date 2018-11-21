@@ -20,3 +20,8 @@ Route::get('/links', function () {
 });
 
 Route::resource('requerimiento', 'RequerimientoController');
+Route::resource('cliente', 'ClienteController');
+Route::resource('anydesk', 'AnydeskController');
+Route::resource('pendiente', 'PendienteController');
+Route::resource('terminado', 'TerminadoController');
+Route::resource('proceso','ProcesoController');
