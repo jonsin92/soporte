@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
     <head>
-        <title>Edición requerimiento</title>
+        <title>Ingreso Nuevo Requerimiento</title>
     </head>
     <div class="row">
         <section class="content">
@@ -24,17 +24,20 @@
 
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Editar Requerimiento</h3>
+                        <h3 class="panel-title"></h3>
+                        <div class="btn-group">
+                            Ingreso de Requerimientos
+                        </div>
                     </div>
                     <div class="panel-body">
                         <div class="table-container">
-                            <form method="POST" action="{{ route('requerimiento.update',$requerimiento->id) }}"  role="form">
+                            <form method="POST" action="{{ route('requerimiento.store') }}"  role="form">
                                 {{ csrf_field() }}
-                                <input name="_method" type="hidden" value="PATCH">
                                 <div class="row">
                                     <div class="col-xs-6 col-sm-6 col-md-6">
                                         <div class="form-group">
-                                            <input type="text" name="cliente" id="cliente" class="form-control input-sm" placeholder="Nombre Cliente">
+                                            <input type="text" name="cliente_id" id="cliente_id" class="form-control input-sm" placeholder="Nombre Cliente">
+                                            <!-- Lista desplegable (pendiente) -->
                                         </div>
                                     </div>
                                     <div class="col-xs-6 col-sm-6 col-md-6">
@@ -47,12 +50,11 @@
                         </div>
                     </div>
                 </div>
-                <input type="text" name="estado" id="estado" class="form-control input-sm" placeholder="Estado">
-
-
+                <input type="text" name="estado_id" id="estado_id" class="form-control input-sm" placeholder="Estado">
+                <!-- Lista desplegable (pendiente) -->
 
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                    <input type="submit"  value="Actualizar" class="btn btn-success btn-block">
+                    <input type="submit"  value="Guardar" class="btn btn-success btn-block">
                     <a href="{{ route('requerimiento.index') }}" class="btn btn-info btn-block" >Atrás</a>
                 </div>
 

@@ -26,10 +26,10 @@
                                 @if($requerimientos->count())
                                     @foreach($requerimientos as $requerimiento)
                                         <tr>
-                                            <td>{{$requerimiento->cliente}}</td>
+                                            <td>{{$requerimiento->cliente_id}}</td> <!-- Que muestre el nombre asociado al id -->
                                             <td>{{$requerimiento->requerimiento}}</td>
                                             <td>{{$requerimiento->fecha_ingreso}}</td>
-                                            <td>{{$requerimiento->estado}}</td>
+                                            <td>{{$requerimiento->estado_id}}</td> <!-- Que muestre el estado asociado al id -->
                                             <td><a class="btn btn-primary btn-xs" href="{{action('RequerimientoController@edit', $requerimiento->id)}}" ><span class="glyphicon glyphicon-pencil"></span></a></td>
                                             <td>
 
@@ -38,14 +38,14 @@
                                     @endforeach
                                 @else
                                     <tr>
-                                        <td colspan="8">No hay registro !!</td>
+                                        <td colspan="8">No existen datos</td>
                                     </tr>
                                 @endif
                                 </tbody>
 
                             </table>
                             <div class="links">
-                                <td><a class="btn btn-primary btn-xs" href="/">Menu Principal</a></td>
+                                <td><a class="btn btn-primary btn-xs" href="/">Menú Principal</a></td>
                             </div>
                         </div>
                     </div>

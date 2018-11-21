@@ -15,7 +15,7 @@ class RequerimientoController extends Controller
     public function index()
     {
         $requerimientos=Requerimiento::orderBy('id','DESC')->paginate(3);
-        return view('test.index',compact('requerimientos'));
+        return view('requerimientos.index',compact('requerimientos'));
     }
 
     /**
@@ -25,7 +25,7 @@ class RequerimientoController extends Controller
      */
     public function create()
     {
-        return view('test.create');
+        return view('requerimientos.create');
     }
 
     /**
@@ -51,7 +51,7 @@ class RequerimientoController extends Controller
     public function show($id)
     {
         $requerimientos=Requerimiento::find($id);
-        return  view('test.show',compact('requerimientos'));
+        return  view('requerimientos.show',compact('requerimientos'));
     }
 
     /**
@@ -63,7 +63,7 @@ class RequerimientoController extends Controller
     public function edit($id)
     {
         $requerimiento=requerimiento::find($id);
-        return view('test.edit',compact('requerimiento'));
+        return view('requerimientos.edit',compact('requerimiento'));
     }
 
     /**
@@ -78,7 +78,7 @@ class RequerimientoController extends Controller
         $this->validate($request,[ 'cliente'=>'required', 'requerimiento'=>'required', 'fecha_ingreso'=>'required', 'estado'=>'required']);
 
         requerimiento::find($id)->update($request->all());
-        return redirect()->route('test.index')->with('success','Registro actualizado satisfactoriamente');
+        return redirect()->route('requerimientos.index')->with('success','Registro actualizado satisfactoriamente');
     }
 
     /**

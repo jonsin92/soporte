@@ -15,10 +15,12 @@ class CreateRequerimientosTable extends Migration
     {
         Schema::create('requerimientos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('cliente');
-            $table->string('requerimiento');
+            $table->unsignedInteger('cliente_id');
+            $table->foreign('cliente_id')->references('id')->on('clientes');
+            $table->string('requerimiento', 1000);
             $table->date('fecha_ingreso');
-            $table->string('estado');
+            $table->unsignedInteger('estado_id');
+            $table->foreign('estado_id')->references('id')->on('estados');
             $table->timestamps();
         });
     }

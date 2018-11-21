@@ -1,4 +1,4 @@
-<!doctype html>
+!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -92,11 +92,11 @@
                     <a href="requerimiento">Ver Todos los Requerimientos</a> <br/>
                     <br/>
                     <a href="">Requerimientos en Proceso</a>
-                    <a href="https://laravel-news.com">Requerimientos Pendientes</a>
-                    <a href="https://nova.laravel.com">Requerimientos Terminados</a> <br/>
+                    <a href="requerimiento">Requerimientos Pendientes</a>
+                    <a href="requerimiento">Requerimientos Terminados</a> <br/>
                     <br/>
-                    <a href="">Contacto Clientes</a>
-                    <a href="https://laracasts.com">Conexiones AnyDesk</a>
+                    <a href="cliente">Clientes</a>
+                    <a href="anydesk">Conexiones AnyDesk</a>
                     <a href="/links">Links de interés</a>
                 </div>
             </div>

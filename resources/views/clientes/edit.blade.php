@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
     <head>
-        <title>Ingreso nuevo requerimiento</title>
+        <title>Edición Cliente</title>
     </head>
     <div class="row">
         <section class="content">
@@ -24,36 +24,35 @@
 
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title"></h3>
-                        <div class="btn-group">
-                            Ingreso de Requerimientos
-                        </div>
+                        <h3 class="panel-title">Editar Requerimiento</h3>
                     </div>
                     <div class="panel-body">
                         <div class="table-container">
-                            <form method="POST" action="{{ route('requerimiento.store') }}"  role="form">
+                            <form method="POST" action="{{ route('cliente.update',$cliente->id) }}"  role="form">
                                 {{ csrf_field() }}
+                                <input name="_method" type="hidden" value="PATCH">
                                 <div class="row">
                                     <div class="col-xs-6 col-sm-6 col-md-6">
                                         <div class="form-group">
-                                            <input type="text" name="cliente" id="cliente" class="form-control input-sm" placeholder="Nombre Cliente">
+                                            <input type="text" name="nombre_cliente" id="nombre_cliente" class="form-control input-sm" placeholder="Nombre Cliente">
                                         </div>
                                     </div>
                                     <div class="col-xs-6 col-sm-6 col-md-6">
                                         <div class="form-group">
-                                            <input type="text" name="requerimiento" id="requerimiento" class="form-control input-sm" placeholder="Requerimiento">
+                                            <input type="text" name="telefono" id="telefono" class="form-control input-sm" placeholder="Teléfono">
                                         </div>
                                     </div>
                                 </div>
-                                <input type="date" name="fecha_ingreso" id="fecha_ingreso" class="form-control input-sm" placeholder="Fecha de Ingreso">
+                                <input type="text" name="email" id="email" class="form-control input-sm" placeholder="E-mail">
                         </div>
                     </div>
                 </div>
-                <input type="text" name="estado" id="estado" class="form-control input-sm" placeholder="Estado">
+
+
 
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                    <input type="submit"  value="Guardar" class="btn btn-success btn-block">
-                    <a href="{{ route('requerimiento.index') }}" class="btn btn-info btn-block" >Atrás</a>
+                    <input type="submit"  value="Actualizar" class="btn btn-success btn-block">
+                    <a href="{{ route('cliente.index') }}" class="btn btn-info btn-block" >Atrás</a>
                 </div>
 
             </div>
