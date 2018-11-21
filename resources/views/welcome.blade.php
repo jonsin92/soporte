@@ -89,13 +89,13 @@
 
                 <div class="links">
                     <!-- <a href="https://laravel.com/docs">Ingreso Requerimientos</a> -->
-                    <a href="requerimiento">Ver Todos los Requerimientos</a> <br/>
+                    <a href="cliente">Clientes</a>
+                    <a href="requerimiento">Todos los Requerimientos</a> <br/>
                     <br/>
                     <a href="proceso">Requerimientos en Proceso</a>
                     <a href="pendiente">Requerimientos Pendientes</a>
                     <a href="terminado">Requerimientos Terminados</a> <br/>
                     <br/>
-                    <a href="cliente">Clientes</a>
                     <a href="anydesk">Conexiones AnyDesk</a>
                     <a href="/links">Links de interés</a>
                 </div>
