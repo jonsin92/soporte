@@ -13,13 +13,18 @@ class CreateEmpresaTable extends Migration
      */
     public function up()
     {
-        Schema::create('_empresa', function (Blueprint $table) {
+        Schema::create('empresa', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('IP', 15);
-            $table->string('User', 30);
-            $table->string('Pass', 16);
+            $table->string('Codigo', 50);
+            $table->string('Nombre', 150);
             $table->boolean('Status');
             $table->string('Mensaje', 500);
+            $table->string('IP', 15);
+            $table->string('DataBase', 30);
+            $table->string('User', 40);
+            $table->string('Pass', 16);
+            $table->integer('Port');
+            $table->integer('AnyDesk');
             $table->timestamps();
         });
     }

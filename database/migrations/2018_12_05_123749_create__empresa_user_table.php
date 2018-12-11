@@ -13,7 +13,7 @@ class CreateEmpresaUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('_empresa_user', function (Blueprint $table) {
+        Schema::create('empresa_user', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('Empresa_id');
             $table->integer('User_id');
