@@ -15,11 +15,11 @@ class CreateEmpresaTable extends Migration
     {
         Schema::create('_empresa', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('IP');
-            $table->text('User');
-            $table->text('Pass');
+            $table->string('IP', 15);
+            $table->string('User', 30);
+            $table->string('Pass', 16);
             $table->boolean('Status');
-            $table->text('Mensaje');
+            $table->string('Mensaje', 500);
             $table->timestamps();
         });
     }

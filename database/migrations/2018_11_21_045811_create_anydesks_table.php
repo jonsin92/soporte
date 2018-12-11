@@ -15,8 +15,7 @@ class CreateAnydesksTable extends Migration
     {
         Schema::create('anydesks', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('cliente_id');
-            $table->foreign('cliente_id')->references('id')->on('clientes');
+            $table->integer('cliente_id');
             $table->integer('direccion');
             $table->timestamps();
         });
